@@ -73,7 +73,7 @@ ul {
 }
 .Header ul li:last-of-type:hover .meagaMenue{
     opacity: 100%;
-    top: 50px;
+    top: -1px;
     visibility: visible;
 }
 .Header ul li a {
@@ -94,8 +94,48 @@ ul {
     left: 0px;
     transition: 0.5s;   
 }
+.megacontainer {
+    position: absolute;
+    top: 81px;
+    width: 100%;
+    height: 602px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 .Header ul li a:hover::before{
     width: 100%;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer; 
+}
+a:visited { text-decoration: none; color:black; }
+a:hover { text-decoration: none; color:var(--dec-color); }
+.meageheader {
+    display: flex;
+    align-items: flex-end;
+}
+.Header .meageheader a {
+    height: 10px;
+    height: 10px;
+    width: unset;
+    padding-bottom: 17px;
+    padding-left: 23px; 
+    position: unset;
+}
+.Header .meageheader:nth-child(9) a {
+    padding-bottom: 26px;
+}
+.Header .meageheader:nth-child(10) a {
+    padding-bottom: 26px;
+}
+.Header .meageheader a::before {
+    position: unset;
+    content: unset;
 }
 .meagaMenue {
     position: absolute;
@@ -211,53 +251,6 @@ ul {
 }
 @media  (max-width: 1200px) {
     .Header .logo {
-        padding-left: 30px;
-    }
-    .meagaMenue {
-        height: 434px;
-        right: -5px;
-    }
-    .meagaMenue .container .leftcontent{
-        display: none;
-        flex: 0;
-    }
-    .meagaMenue .container .rightcontent {
-        flex: 1;
-        display: flex;
-        height: 100%;
-        width: 100%;
-    }
-    .meagaMenue .container .rightcontent .container {
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(1,441px);
-        grid-template-rows: repeat(10,31px);
-        justify-content: flex-end;
-        column-gap: 10px;
-    }
-    .Header ul li:last-of-type a:hover  .meagaMenue {
-        opacity: 1;
-        top: 98px;
-        width: fit-content;
-    }
-    .meagaMenue .container .rightcontent .container {
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(1,454px);
-        grid-template-rows: repeat(10,30px);
-        justify-content: flex-end;
-        column-gap: 10px;
-    }
-    .meageheader::before{
-        top: 28%;
-    }
-    .meageheader::after{
-        top: 40%;
-        left: 1%;
-    }
-}
-@media (max-width: 992px)  {
-    .Header .logo {
         padding-left: 0px;
         padding-top: 10px;
     }
@@ -292,6 +285,63 @@ ul {
         top: 98px;
         visibility: visible;
         width: fit-content;
+        left: 0px;
+    }
+    .meagaMenue .container .rightcontent .container {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(1,454px);
+        grid-template-rows: repeat(10,30px);
+        justify-content: flex-end;
+        column-gap: 10px;
+    }
+    .meageheader::before{
+        top: 28%;
+    }
+    .meageheader::after{
+        top: 57%;
+        left: 1%;
+    }
+}
+@media (max-width: 992px)  {
+    .Header .logo {
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .Header .container{
+        flex-direction: column;
+        row-gap: 10px;
+        width: 100%;
+    }
+    .Header ul li {
+        font-size: 14px;
+        width: 122px;
+        padding: 0px 22px;
+    }
+    .meagaMenue {
+        height: 434px;
+        right: 0px;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .meagaMenue .container .leftcontent{
+        display: none;
+        flex: 0;
+    }
+    .meagaMenue .container .rightcontent {
+        flex: 1;
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+    .Header ul li:last-of-type:hover .meagaMenue {
+        opacity: 100%;
+        top: 39px;
+        visibility: visible;
+        width: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .meagaMenue .container .rightcontent .container {
         display: grid;
@@ -3312,37 +3362,7 @@ h3 {
     border-radius: 0px;
     transform: translate(-50%,-50%);
 }
-a:hover {
-    cursor: pointer;
-    
-}
-a:link{
-    text-decoration: none;
-}
-a:visited { text-decoration: none; color:black; }
-a:hover { text-decoration: none; color:var(--dec-color); }
-.meageheader {
-    display: flex;
-    align-items: flex-end;
-}
-.Header .meageheader a {
-    height: 10px;
-    height: 10px;
-    width: unset;
-    padding-bottom: 17px;
-    padding-left: 23px; 
-    position: unset;
-}
-.Header .meageheader:nth-child(9) a {
-    padding-bottom: 26px;
-}
-.Header .meageheader:nth-child(10) a {
-    padding-bottom: 26px;
-}
-.Header .meageheader a::before {
-    position: unset;
-    content: unset;
-}
+
 @media (max-width: 992px) {
  .meagaMenue .meageheader:nth-child(10) a {
         padding-bottom: 16px;
